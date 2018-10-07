@@ -36,9 +36,9 @@ if checkIfString
     oldImage = imread(img);    
 end
 
-if strcmp(input,'nearest') == 0
+if strcmp(input,'nearest') == 1
     modifiedImage = nearestNeighbor(oldImage, dimensions);
-elseif strcmp(input, 'bilinear') == 0
+elseif strcmp(input, 'bilinear') == 1
     modifiedImage = mybilinear(oldImage, dimensions);
 end
 
@@ -47,4 +47,3 @@ figure, imshow(modifiedImage);
 %figure, imshow(oldImage); 
 
 end
-
