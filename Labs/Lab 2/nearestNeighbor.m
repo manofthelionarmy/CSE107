@@ -8,11 +8,12 @@ nPrime = dimensions(1, 2);
 %storing the dimensions of the input image
 m = size(oldImage,1);
 n = size(oldImage, 2); 
+
 modifiedImage = uint8(zeros(mPrime, nPrime));
 
 for i = 1:mPrime
     
-   for j = 1: (nPrime)
+   for j = 1:nPrime
    
     x = ((m / mPrime) * (i - 0.5)) + 0.5; 
     y = ((n / nPrime) * (j - 0.5)) + 0.5; 
