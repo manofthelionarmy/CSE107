@@ -75,8 +75,26 @@ for i = 1:mPrime
             n1 = floor(y);
             n2 = ceil(y);
         end
+        
+        p1 = (oldImage(m1, n1));
+        p2 = (oldImage(m1, n2));
+        p3 = (oldImage(m2, n1));
+        p4 = (oldImage(m2, n2));
+        
+        ratio1 = ((x - m1)/(m2 -m1));
+        
+        difference1 = double((p3 - p1));
+        pPrime1 = ((difference1 * ratio1) + double(p1));
+        
+        difference2 = double((p4 - p2)); 
+        pPrime2 = ((difference2 * ratio1) + double(p2)); 
+        
        
-        p = ((oldImage(m2,m2) - oldImage(m1, n1)) * (((i + 0.5) - m1)/(m2 -m1))) + oldImage(m1,n1);
+        ratio2 = (y - n1) / (n2 - n1);
+        difference3 = double((pPrime2 - pPrime1));
+        p = ((difference3 * ratio2) + pPrime1);
+        
+        p = round(p,0);
         modifiedImage(i,j) = p;
 
         end
