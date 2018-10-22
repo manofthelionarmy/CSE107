@@ -1,5 +1,3 @@
-histogram = compute_histogram('Lab_03_image1_dark.tif');
+%img = equalize('Lab_03_image1_dark.tif');
 
-plot_histogram(histogram);
-
-transform = histogram_transform(histogram);
+img2 = equalize('Lab_03_image2_light.tif');
